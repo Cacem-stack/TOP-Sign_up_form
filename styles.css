@@ -1,0 +1,129 @@
+/*
+* {
+  border: solid black 1px;
+}
+*/
+
+.wrapper, html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.container > * {
+  flex-grow: 1;
+  border: dotted black 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+ .background {
+  position: absolute;
+  max-height: 100%;
+  z-index: -1;
+}
+
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 40%;
+  overflow: hidden;
+}
+
+.left > * {
+  flex-grow: 1;
+}
+
+
+.left > .footer {
+  max-height: 3%;
+  text-align: center;
+  color: rgba(245, 245, 245, 0.9);
+  font-size: 0.85em;
+}
+
+.left > .footer > a {
+  text-decoration: underline;
+}
+
+.left > .banner {
+  max-height: 15%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40%;
+}
+
+.left > .banner > .head {
+  height: 85%;
+  width: auto;
+  z-index: 1;
+}
+
+@font-face {
+  font-family: norse;
+  src: url(./fonts/Norse-Bold.otf);
+}
+
+.left > .banner > .odin {
+  color: white;
+  font-family: norse;
+  font-size: 5em;
+}
+
+.right {
+  flex-grow: 2;
+  color: white;
+}
+
+
+.right > * {
+  flex-grow: 1;
+  flex-shrink: 1;
+  background: rgb(240, 240, 240);
+}
+
+.right > .mid {
+  flex-grow: 0.9;
+  flex-shrink: 0;
+  background: white;
+  box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.right > .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+  gap: 20px;
+}
+
+.right > .top > * {
+  color: black;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.right > .top > .hero {
+  margin-left: 5%;
+  margin-right: 15%;
+  flex-grow: 0;
+  min-width: 40vh;
+}
+
+.right > .top > .spacer {
+  flex-grow: 1;
+  max-height: 30%;
+}
+
+div .top:first-child {
+}

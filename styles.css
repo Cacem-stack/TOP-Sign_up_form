@@ -2,12 +2,16 @@
 * {
   border: solid black 1px;
 }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 */
 
 .wrapper, html, body {
   height: 100%;
   margin: 0;
 }
+
 
 .container {
   display: flex;
@@ -21,12 +25,13 @@
   flex-direction: column;
 }
 
- .background {
+.background {
   position: absolute;
   max-height: 100%;
   z-index: -1;
 }
 
+/* Left-hand elements */
 
 .left {
   display: flex;
@@ -40,12 +45,11 @@
   flex-grow: 1;
 }
 
-
 .left > .footer {
   max-height: 3%;
   text-align: center;
   color: rgba(245, 245, 245, 0.9);
-  font-size: 0.85em;
+  font-size: 0.65em;
 }
 
 .left > .footer > a {
@@ -65,7 +69,6 @@
 .left > .banner > .head {
   height: 85%;
   width: auto;
-  z-index: 1;
 }
 
 @font-face {
@@ -78,6 +81,8 @@
   font-family: norse;
   font-size: 5em;
 }
+
+/* Right-hand elements */
 
 .right {
   flex-grow: 2;
@@ -96,8 +101,42 @@
   flex-shrink: 0;
   background: white;
   box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.1);
+  min-height: 15%;
+  display: flex;
+  flex-direction: column;
   z-index: 2;
 }
+
+.right > .mid > * {
+  margin-left: 5%;
+  gap: 40px;
+}
+
+.right > .mid > .form-text {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 1.5%;
+  margin-bottom: 2%;
+}
+
+.right > .mid > form {
+  display: flex;
+  color: black;
+  font-size: .5em;
+  font-weight: bold;
+  letter-spacing: .125em;
+}
+
+.right > .mid > form > .left-col, .right-col {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 5%;
+}
+
 
 .right > .top {
   display: flex;
@@ -120,10 +159,55 @@
   min-width: 40vh;
 }
 
+.right > .top > .hero:last-child {
+  margin-bottom: 5%;
+}
+
 .right > .top > .spacer {
   flex-grow: 1;
   max-height: 30%;
 }
 
-div .top:first-child {
+.right > .bot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.right > .bot > * {
+  margin-left: 5%;
+  margin-right: 15%;
+}
+.button {
+  color: white;
+  background-color: #596D48;
+  border-radius: 5px;
+  border: none;
+  margin-top: 3.5%;
+  padding: 0.9em 3em;
+  font-size: .7em;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+input:focus {
+  border: solid blue 1px;
+  border-radius: 1px;
+  box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+input:invalid {
+  border: solid red 1px;
+  border-radius: 2px;
+  box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.right > .bot > .account-text {
+  color: black;
+  font-size: .8em;
+}
+
+.right > .bot > .account-text > a {
+  color: #596D48;
 }
